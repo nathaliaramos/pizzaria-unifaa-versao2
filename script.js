@@ -12,9 +12,7 @@ function showPizzaDetails(pizzaName) {
   }
   
   function checkout() {
-    // Implemente a lógica para finalizar o pedido se necessário
     alert("Pedido finalizado! Obrigado por escolher a Pizzaria UNIFAA.");
-    // Limpa o carrinho após o checkout
     document.getElementById('cart-items').innerHTML = '';
     document.getElementById('cart-section').style.display = 'none';
   }
