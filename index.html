@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pizzaria UNIFAA</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <header>
+    
+  </header>
+
+  <nav class="menu">
+                  
+    <ul>
+         <li><a href="#header" title="Home">Home</a></li>  
+         <li><a href="#about-section" title="Quem Somos">Quem somos</a></li>
+         <li><a href="#menu-section" title="Cardápio">Cardápio</a></li>  
+         <li><a href="#contact-section" title="Contato">Contato</a></li>
+         <li><a href="#cart-section" title="Carrinho">Carrinho</a></li>
+              
+    </ul>
+            
+ </nav>
+
+  <section id="welcome-section">
+    <p>Bem-vindo a Pizzaria UNIFAA!<br>Onde cada pedaço conta uma história de sabor e tradição!</p>
+  </section>
+
+  <section id="about-section">
+    <h2>Sobre nós</h2>
+    <p>Localizada no coração da cidade, a Pizzaria UNIFAA é o lugar perfeito para os amantes da boa comida e da autêntica culinária italiana. Nossa missão é proporcionar uma experiência gastronômica única, unindo a paixão pela pizza à qualidade dos ingredientes. Na UNIFAA, não apenas fazemos pizzas, nós criamos obras de arte que encantam paladares e elevam o prazer de comer bem. O segredo de nossas pizzas está na combinação perfeita de ingredientes frescos e selecionados, uma massa artesanal que derrete na boca e um forno a lenha que confere aquele sabor inconfundível. Cada pizza é cuidadosamente preparada por nossos talentosos pizzaiolos, que dedicam atenção aos detalhes para garantir que cada fatia seja uma experiência memorável. Além do cardápio clássico de pizzas, oferecemos opções para todos os gostos, desde as tradicionais até as mais inovadoras. Seja para uma reunião casual com amigos, um jantar romântico ou uma celebração especial, a Pizzaria UNIFAA é o lugar ideal para saborear momentos inesquecíveis. Estamos comprometidos com a excelência em atendimento, qualidade e, é claro, no prazer de servir uma pizza deliciosa. Venha nos visitar e descubra por que a Pizzaria UNIFAA é o destino preferido dos apaixonados por pizza na cidade. Sua jornada gastronômica começa aqui. Una-se a nós na Pizzaria UNIFAA, onde a tradição e o sabor se encontram!</p>
+  </section>
+
+  <section id="menu-section">
+    <div class="pizza-item" onclick="showPizzaDetails('Calabresa')">
+      <img src="img/calabresa.png" alt="Calabresa">
+      <h3>Calabresa</h3>
+      <p>Descrição: Molho de tomate, mussarela, calabresa.</p>
+      <p>Tamanhos: Pequena, Média, Grande</p>
+      <p>Valores: R$10, R$15, R$20</p>
+      <button onclick="addToCart('Calabresa')">Adicionar ao Carrinho</button>
+    </div>
+  
+    <div class="pizza-item" onclick="showPizzaDetails('Moda da Casa')">
+      <img src="img/moda.png" alt="Moda">
+      <h3>Moda da Casa</h3>
+      <p>Descrição: Muçarela, palmito, frango, presunto, azeitona e orégano</p>
+      <p>Tamanhos: Pequena, Média, Grande</p>
+      <p>Valores: R$12, R$18, R$24</p>
+      <button onclick="addToCart('Moda da Casa')">Adicionar ao Carrinho</button>
+    </div>
+  
+    <div class="pizza-item" onclick="showPizzaDetails('Confete')">
+      <img src="img/confete.png" alt="Confete">
+      <h3>Confete</h3>
+      <p>Descrição: Pizza doce de Confete e Nutella</p>
+      <p>Tamanhos: Pequena, Média, Grande</p>
+      <p>Valores: R$14, R$20, R$26</p>
+      <button onclick="addToCart('Confete')">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+  
+
+  <section id="contact-section">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para fazer pedidos, esclarecer dúvidas ou fornecer feedback.</p>
+    
+      <form id="contact-form" action="#" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </section>
+    
+
+  </section>
+
+  <section id="cart-section">
+    <h2>Carrinho</h2>
+    <div id="cart-items"></div>
+    <button id="checkout-btn" onclick="checkout()">Fechar Pedido</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
